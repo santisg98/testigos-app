@@ -36,7 +36,7 @@ function App() {
   const [errorTalleres, setErrorTalleres] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3001/catalogo')
+    fetch('https://testigos-app-backend.onrender.com/catalogo')
       .then((r) => r.json())
       .then((datos) => setCatalogoCompleto(datos))
       .catch((err) => console.error('Error al cargar el catalogo:', err))
@@ -56,7 +56,7 @@ function App() {
     try {
       const base64 = await convertirABase64(archivo)
 
-      const respuesta = await fetch('http://localhost:3001/analizar', {
+      const respuesta = await fetch('https://testigos-app-backend.onrender.com/analizar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ imagenBase64: base64, tipoImagen: archivo.type }),
@@ -115,7 +115,7 @@ function App() {
         const { latitude, longitude } = posicion.coords
         try {
           const respuesta = await fetch(
-            `http://localhost:3001/talleres?lat=${latitude}&lng=${longitude}`
+            `https://testigos-app-backend.onrender.com/talleres?lat=${latitude}&lng=${longitude}`
           )
           const datos = await respuesta.json()
 
