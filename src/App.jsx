@@ -323,7 +323,7 @@ function App() {
           {resultado.tipo === 'Solucionable' && resultado.producto && (
             
               <a
-              href={"https://www.amazon.es/s?k=" + encodeURIComponent(resultado.producto)}
+              href={"https://www.amazon.es/s?k=" + encodeURIComponent(resultado.producto) + "&tag=testigosapp-21"}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-orange-500 hover:bg-orange-600 text-white text-center font-semibold py-3 rounded-xl mb-3 transition"
