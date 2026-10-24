@@ -332,6 +332,16 @@ function App() {
             </a>
           )}
 
+                    {(resultado.id === '021' || resultado.id === '023') && (
+            <a
+              href="https://www.awin1.com/cread.php?awinmid=10499&awinaffid=3108185"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="block w-full bg-slate-700 hover:bg-slate-600 text-white text-center font-semibold py-3 rounded-xl mb-3 transition"
+            >
+              🛞 Ver neumáticos
+            </a>
+          )}
           {resultado.tipo === 'Requiere taller' && (
             <button
               onClick={() => {
@@ -344,6 +354,10 @@ function App() {
             </button>
           )}
 
+          
+                    <p className="text-slate-500 text-xs mb-3">
+            Como afiliado de Amazon, obtengo ingresos por las compras adscritas. Algunos enlaces son de afiliado, y no te cuestan nada extra.
+          </p>
           <button onClick={irAInicio} className="text-orange-400 underline text-sm">
             Volver al inicio
           </button>
